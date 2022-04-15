@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --light-primary-color: #1992D4;
+    --light-primary-color-variant: #15a5f3;
+    --light-secondary-color: #FACC15;
+    --light-primary-surface-color: #fff;
+    --light-background-color: #E2E8F0;
+    --light-text-on-primary-color: #fff;
+    --light-text-on-surface-color: #4b4a4a;
+    --light-text-on-surface-color-strong: #000;
+}
