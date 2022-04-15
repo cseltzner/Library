@@ -122,7 +122,7 @@ header {
 }
 
 
-.add-button {  
+button {  
     display: inline-block;
     outline: none;
     cursor: pointer;
@@ -137,9 +137,14 @@ header {
     color: #222222;
 }
 
-.add-button:hover {
+button:hover {
     border-color: #000000;
     background: #f7f7f7;
+}
+
+.remove-all-button {
+    color: rgb(220, 0, 0);
+    margin-top: auto;
 }
 
 main {
@@ -162,4 +167,21 @@ main {
     gap: 12px;
     border-radius: 6px;
     border-left: 6px solid var(--light-secondary-color);
+    text-transform: capitalize;
+}
+
+.card h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #12121273;
+}
+
+.card>*:nth-child(2) {
+    margin-top: 48px;
+}
+
+.card p {
+    font-size: 1.3rem;
+    padding: 8px 0px;
 }
