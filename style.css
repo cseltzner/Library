@@ -90,6 +90,10 @@ header {
     box-shadow: rgb(231 238 236) 0px 0px 0px 1px;
 }
 
+.input-container input:invalid {
+    border: 1px solid red;
+}
+
 [type=checkbox] {
     -webkit-appearance: none;
     -moz-appearance: none;

@@ -29,12 +29,20 @@ addButton.addEventListener('click', function() {
         addBookToLibrary(title, author, isRead)
         return;
     } else if (title.length == 0) {
-        alert('Title field cannot be empty');
+        invalidate(titleInput, 'Title field cannot be empty');
         return;
     } else if (author.length == 0) {
-        alert('Author field cannot be empty');
+        invalidate(authorInput, 'Author field cannot be empty');
         return;
     }
+})
+
+titleInput.addEventListener('input', function() {
+    validate(titleInput);
+});
+
+authorInput.addEventListener('input', function() {
+    validate(authorInput);
 })
 
 removeAllButton.addEventListener('click', function() {
@@ -47,6 +55,15 @@ document.querySelectorAll('.remove-icon').forEach( icon => {
         removeBookAtIndex(item);
     })
 })
+
+function validate(input) {
+    input.setCustomValidity("");
+}
+
+function invalidate(input, message) {
+    input.setCustomValidity(message);
+    input.reportValidity();
+}
 
 function addBookToLibrary(title, author, isRead) {
     myLibrary.push(new Book(title, author, isRead));
